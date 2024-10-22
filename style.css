@@ -79,8 +79,23 @@ button:hover {
 #next-btn,
 #prev-btn,
 #home-btn {
-	display: inline-block;
+	display: inline-block; /* Ensure buttons are visible */
+	padding: 10px 20px;
 	margin: 10px 5px;
+	background-color: #5cb85c;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	text-align: center;
+	width: 100px; /* Set a width so it's not too wide on mobile */
+}
+
+#next-btn:hover,
+#prev-btn:hover,
+#home-btn:hover {
+	background-color: #4cae4c;
 }
 
 /* Result box styling */
