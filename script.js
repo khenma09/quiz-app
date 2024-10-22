@@ -87,6 +87,7 @@ function startQuiz() {
 }
 
 // Function to load the home page with instructions and "Start Quiz" button
+// Function to load the home page with instructions and "Start Quiz" button
 function loadHomePage() {
 	const quizForm = document.getElementById("quiz-form");
 	quizForm.innerHTML = `
@@ -97,7 +98,7 @@ function loadHomePage() {
     </div>
   `;
 
-	// Hide navigation buttons on the home page
+	// Hide all navigation buttons on the home page
 	document.getElementById("next-btn").style.display = "none";
 	document.getElementById("prev-btn").style.display = "none";
 	document.getElementById("home-btn").style.display = "none"; // Hide Home button on the homepage
