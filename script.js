@@ -68,6 +68,9 @@ function loadQuestion() {
 		document.getElementById("home-btn").style.display = "none"; // Hide Home button
 		document.getElementById("prev-btn").style.display = "inline-block"; // Show Previous button
 	}
+
+	// Show the Next button
+	document.getElementById("next-btn").style.display = "inline-block";
 }
 
 // Function to start the quiz
@@ -79,7 +82,8 @@ function startQuiz() {
 
 	// Show navigation buttons when the quiz starts
 	document.getElementById("next-btn").style.display = "inline-block";
-	document.getElementById("prev-btn").style.display = "inline-block";
+	document.getElementById("prev-btn").style.display = "none"; // Initially hide Previous button
+	document.getElementById("home-btn").style.display = "none"; // Initially hide Home button
 }
 
 // Function to load the home page with instructions and "Start Quiz" button
@@ -234,7 +238,6 @@ document.getElementById("prev-btn").addEventListener("click", (event) => {
 	prevQuestion(); // Call the function to move to the previous question
 });
 
-// Event listener for Home button
 document.getElementById("home-btn").addEventListener("click", (event) => {
 	event.preventDefault();
 	loadHomePage(); // Return to homepage
