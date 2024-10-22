@@ -60,9 +60,9 @@ function loadQuestion() {
 
 	quizForm.appendChild(questionDiv);
 
-	// Show "Home" button instead of "Previous" if on the first question
+	// Show "Home" button on the first question and hide the Previous button
 	if (currentQuestion === 0) {
-		document.getElementById("home-btn").style.display = "inline-block";
+		document.getElementById("home-btn").style.display = "inline-block"; // Show Home button
 		document.getElementById("prev-btn").style.display = "none"; // Hide Previous button
 	} else {
 		document.getElementById("home-btn").style.display = "none"; // Hide Home button
@@ -100,8 +100,9 @@ function loadHomePage() {
 	// Hide navigation buttons on the home page
 	document.getElementById("next-btn").style.display = "none";
 	document.getElementById("prev-btn").style.display = "none";
+	document.getElementById("home-btn").style.display = "none"; // Hide Home button on the homepage
 
-	// Add event listener to the "Start Quiz" button
+	// Attach event listener for the "Start Quiz" button after it's rendered
 	document
 		.getElementById("start-quiz-btn")
 		.addEventListener("click", function () {
