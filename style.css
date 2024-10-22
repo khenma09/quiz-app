@@ -1,0 +1,123 @@
+/* Basic styling for body and background */
+body {
+	font-family: Arial, sans-serif;
+	background: linear-gradient(to bottom, darkred, darkblue);
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+}
+
+.container {
+	width: 80%; /* Responsive width for large screens */
+	max-width: 600px; /* Maximum width */
+	background-color: white; /* Background color for the container */
+	padding: 20px; /* Padding inside the container */
+	border-radius: 10px; /* Rounded corners */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+	margin: 20px; /* Margin for smaller screens */
+}
+
+h1 {
+	text-align: center;
+	margin-top: 0;
+	color: white;
+}
+
+#quiz-container {
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.question-box {
+	background-color: navy;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	color: white;
+}
+
+/* Styling for the answer buttons */
+.option-button {
+	display: block;
+	width: 100%;
+	padding: 15px;
+	margin: 10px 0;
+	background-color: #f1f1f1; /* Default background */
+	color: #333; /* Default text color */
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	text-align: left;
+}
+
+/* Hover effect for buttons */
+.option-button:hover {
+	background-color: #ddd; /* Change color when hovered */
+}
+
+/* Style for selected option */
+.selected {
+	background-color: #5cb85c; /* Green background for selected option */
+	color: white; /* White text for selected option */
+}
+
+/* Button Styling for navigation (Previous/Next buttons) */
+button {
+	padding: 15px 40px;
+	background: #5cb85c;
+	color: white;
+	border: none;
+	cursor: pointer;
+	margin-top: 10px;
+	border-radius: 50px;
+	font-size: 16px;
+	width: 100%; /* Full width button for responsiveness */
+	text-align: center;
+}
+
+button:hover {
+	background: #4cae4c;
+}
+
+.result-box,
+.home-box {
+	text-align: center;
+	padding: 50px;
+}
+
+#prev-btn,
+#next-btn {
+	display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+	.container {
+		width: 90%; /* Adjust width for tablets */
+		max-width: 100%; /* Ensure it takes full width on smaller screens */
+	}
+
+	button {
+		padding: 10px 30px; /* Adjust button size for smaller screens */
+	}
+
+	.question-box {
+		padding: 15px; /* Adjust padding for smaller screens */
+	}
+}
+
+@media (max-width: 480px) {
+	.container {
+		width: 100%; /* Full width for smartphones */
+		margin: 10px; /* Smaller margin */
+	}
+
+	button {
+		padding: 8px 20px; /* Smaller padding for buttons on mobile */
+	}
+}
