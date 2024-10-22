@@ -60,9 +60,14 @@ function loadQuestion() {
 
 	quizForm.appendChild(questionDiv);
 
-	// Show or hide the "Previous" button based on the current question
-	document.getElementById("prev-btn").style.display =
-		currentQuestion === 0 ? "none" : "inline-block";
+	// Show "Home" button instead of "Previous" if on the first question
+	if (currentQuestion === 0) {
+		document.getElementById("home-btn").style.display = "inline-block";
+		document.getElementById("prev-btn").style.display = "none"; // Hide Previous button
+	} else {
+		document.getElementById("home-btn").style.display = "none"; // Hide Home button
+		document.getElementById("prev-btn").style.display = "inline-block"; // Show Previous button
+	}
 }
 
 // Function to start the quiz
@@ -218,7 +223,7 @@ function retakeQuiz() {
 // Initialize the quiz by loading the home page
 loadHomePage();
 
-// Add Event Listeners for Next and Previous Buttons
+// Add Event Listeners for Next, Previous, and Home Buttons
 document.getElementById("next-btn").addEventListener("click", (event) => {
 	event.preventDefault(); // Prevent default button behavior
 	nextQuestion(); // Call the function to move to the next question
@@ -227,4 +232,10 @@ document.getElementById("next-btn").addEventListener("click", (event) => {
 document.getElementById("prev-btn").addEventListener("click", (event) => {
 	event.preventDefault(); // Prevent default button behavior
 	prevQuestion(); // Call the function to move to the previous question
+});
+
+// Event listener for Home button
+document.getElementById("home-btn").addEventListener("click", (event) => {
+	event.preventDefault();
+	loadHomePage(); // Return to homepage
 });

@@ -1131,7 +1131,7 @@ const quizData = [
 		options: [
 			"Continuous blast of the ship’s horn",
 			"One short and two long blasts",
-			"Six short blasts followed by one long blast",
+			"Seven short blasts followed by one long blast",
 			"Three long blasts on the whistle",
 		],
 		correct: 2,
